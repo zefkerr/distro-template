@@ -19,13 +19,13 @@ jobs:
       fail-fast: false
       max-parallel: 5
       matrix:
-        variant: [general, nvidia]
-        desktop: [nogui, xfce, mate, budgie, gnome, plasma]
+        variant: [general]
+        desktop: [gnome]
         include:
           - variant: general
             suffix: ''
-          - variant: nvidia
-            suffix: '-nvidia'
+          - variant: general
+            suffix: 'general'
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
